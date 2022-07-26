@@ -19,7 +19,7 @@ WORKDIR $HOME/
 # TFTPサーバのインストール
 RUN apt-get update && apt-get install -y tftpd-hpa
 
-# ref: https://linux.die.net/man/8/in.tftpd
+# ref: https://manpages.debian.org/testing/tftpd-hpa/in.tftpd.8.en.html
 CMD echo -n 'Starting TFTP Server...'
 CMD /usr/sbin/in.tftpd --version
 CMD /usr/sbin/in.tftpd --foreground --user tftp --address :69 --create --secure --blocksize 1468 --verbose /srv/tftp
