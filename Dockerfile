@@ -17,9 +17,7 @@ ENV HOME=/home
 WORKDIR $HOME/
 
 # TFTPサーバのインストール
-RUN apt-get update && \
-    apt-get install -y \
-        tftpd-hpa
+RUN apt-get update && apt-get install -y tftpd-hpa
 
 # ref: https://linux.die.net/man/8/in.tftpd
 CMD echo -n 'Starting TFTP Server...'
