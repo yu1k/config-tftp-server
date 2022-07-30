@@ -1,7 +1,7 @@
 FROM --platform=linux/x86_64 ubuntu:20.04
 
 RUN apt-get update
-RUN apt-get install -y locales procps
+RUN apt-get install -y locales procps tzdata
 
 RUN yes | unminimize
 RUN locale-gen ja_JP.UTF-8
