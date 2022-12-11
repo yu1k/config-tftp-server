@@ -12,6 +12,8 @@
   - `$ docker -v`: `Docker version 20.10.12`
   - `$ docker-compose -v`: `docker-compose version 1.25.0`
 
+### 起動コマンド
+
 ```
 $ git clone https://github.com/yu1k/config-tftp-server.git config-tftp-server && cd $_
 $ chmod 777 ./tftp_dir && docker-compose up -d --build
@@ -23,7 +25,7 @@ TFTPでやりとりするファイルを置く `./tftp_dir` に 777 の権限を
 
 docker-composeのportsでホスト側のポート 69/udp とコンテナ内のポート 69/udp をフォワーディングしてあるので、ホストにTFTPサーバを立てた構成と同じ利用方法でTFTPサーバを利用できます。
 
-## 各種コマンド
+### 各種コマンド
 
 ```
 $ docker-compose restart [container_name]
